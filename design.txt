@@ -1,0 +1,37 @@
+as a user, I want save the answers to the following questions
+What have you done
+what are you doing
+what is your obstacle
+
+as a user, I want to have a limit of 2 minutes to answer my questions
+
+As I a user I want to edit my answers
+
+As I a user I want to delete my set of answers
+
+Bussiness objects:
+ SubmissionDateTime
+  date type: SubmissionDateTime
+  timer type: time 
+
+
+ MorningRecord
+  question1 type: string
+  question2 type: string
+  question3 type: string
+
+ UserProfile
+  TBD
+  firstname type: string
+  lastname type: string
+  username type: string
+  password type: password
+  avatar type: image
+
+ SocialSharing
+   TBD
+
+Service
+
+Morningrecords
+  collection of all submitted morning records

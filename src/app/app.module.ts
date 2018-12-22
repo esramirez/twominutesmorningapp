@@ -3,16 +3,43 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MorningrecordsService } from './services/morningrecords.service';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import 'hammerjs';
+import {MatButtonModule,MatIconModule, MatInputModule, MatSelectModule,
+MatSliderModule, MatSlideToggleModule, MatCardModule,
+MatToolbarModule} from '@angular/material';
+import { MorningRecordComponent } from './morning-record/morning-record.component';
+import { ListMorningRecordComponent } from './list-morning-record/list-morning-record.component';
+import { Route, Routes, RouterModule } from '@angular/router';
 
+
+const routes: Routes=[
+    { path: '', component: ListMorningRecordComponent },
+    { path: 'morning', component: MorningRecordComponent},
+    { path: 'morning/:id', component: MorningRecordComponent}
+]
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MorningRecordComponent,
+    ListMorningRecordComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule, 
+    MatInputModule, 
+    MatSelectModule,
+    MatSliderModule, 
+    MatSlideToggleModule, 
+    MatCardModule,
+    MatToolbarModule
   ],
-  providers: [],
+  providers: [MorningrecordsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
