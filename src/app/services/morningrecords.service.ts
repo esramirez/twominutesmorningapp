@@ -17,6 +17,8 @@ export class MorningrecordsService {
             new Morning("Boring answer to question 1"," Boring answer to question 2",
                           "Boring answer to question 3", new Date())
           ];
+
+      callback(records);
   }
 
   saveMorningRecord(Morning, callback){

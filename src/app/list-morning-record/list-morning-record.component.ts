@@ -9,12 +9,15 @@ import { Morning } from '../logic/MorningRecord';
 })
 export class ListMorningRecordComponent implements OnInit {
 
-  constructor(private data: MorningrecordsService) { }
   recordList: [Morning];
+  
+  constructor(private data: MorningrecordsService) { }
+  
   ngOnInit() {
 
-    this.data.getMorningRecords( list => {
-      this.recordList = list;
+    this.data.getMorningRecords( recordList => {
+      this.recordList = recordList;
+      
     });
   }
 

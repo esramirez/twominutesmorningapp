@@ -1,3 +1,19 @@
-<p>
-  morning-record works!
-</p>
+<form>
+  <mat-card>
+  <mat-form-field>
+      <textarea matInput placeholder="answer question 1" name="question1" [(ngModel)]="morning.question1"></textarea>
+      <textarea matInput placeholder="question2" name="question2" [(ngModel)]="morning.question2"></textarea>
+      <textarea matInput placeholder="this is question 3" name="question3" [(ngModel)]="morning.question3"></textarea>
+  </mat-form-field>
+  </mat-card>
+
+  <mat-card>
+      <button mat-raised-button (click)="cancel()">Cancel</button>
+      <button mat-raised-button (click)="save()" color="accent">Save</button>
+    </mat-card>
+
+    <mat-card>
+        {{ morning | json}}
+      </mat-card>
+</form>
+

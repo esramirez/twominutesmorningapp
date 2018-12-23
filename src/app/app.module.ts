@@ -11,7 +11,8 @@ MatSliderModule, MatSlideToggleModule, MatCardModule,
 MatToolbarModule} from '@angular/material';
 import { MorningRecordComponent } from './morning-record/morning-record.component';
 import { ListMorningRecordComponent } from './list-morning-record/list-morning-record.component';
-import { Route, Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 const routes: Routes=[
@@ -26,6 +27,7 @@ const routes: Routes=[
     ListMorningRecordComponent
   ],
   imports: [
+    FormsModule,
     RouterModule.forRoot(routes),
     BrowserModule,
     AppRoutingModule,
