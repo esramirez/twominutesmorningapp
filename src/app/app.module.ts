@@ -8,12 +8,13 @@ import { BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import 'hammerjs';
 import {MatButtonModule,MatIconModule, MatInputModule, MatSelectModule,
 MatSliderModule, MatSlideToggleModule, MatCardModule,
-MatToolbarModule} from '@angular/material';
+MatToolbarModule,
+MatSnackBarModule} from '@angular/material';
 import { MorningRecordComponent } from './morning-record/morning-record.component';
 import { ListMorningRecordComponent } from './list-morning-record/list-morning-record.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes=[
     { path: '', component: ListMorningRecordComponent },
@@ -27,6 +28,8 @@ const routes: Routes=[
     ListMorningRecordComponent
   ],
   imports: [
+    MatSnackBarModule,
+    HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes),
     BrowserModule,

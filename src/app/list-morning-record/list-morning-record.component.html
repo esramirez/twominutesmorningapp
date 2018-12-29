@@ -4,8 +4,9 @@
   <mat-card-subtitle>{{ record.question3 }}</mat-card-subtitle>
   <mat-card-subtitle>{{ record.timestamp }} </mat-card-subtitle>
   <mat-card-actions>
-    <button mat-button><mat-icon>share</mat-icon></button>
+    <button mat-button (click)="share(record)"><mat-icon>share</mat-icon></button>
+    <button mat-button (click)="getDetails(record)"><mat-icon>list</mat-icon></button>
   </mat-card-actions>
 </mat-card>
 
-<a id="btnCreate" mat-fab routerLink="/mornig"><mat-icon>create</mat-icon></a>
+<a id="btnCreate" mat-fab routerLink="/morning"><mat-icon>create</mat-icon></a>
